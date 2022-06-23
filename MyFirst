@@ -1,1 +1,16 @@
+# Постулат Бертрана
+# Поиск простых чисел на интервале n < p < 2*n
+
+x = int(input('Input n = '))
+rez = 0
+
+def IsPrime(n):
+    d = 2
+    while d * d <= n and n % d != 0:
+        d += 1
+    return d * d > n
+
+for i in range(x+1, 2*x):
+    if IsPrime(i) == True:
+        rez += 1
 
